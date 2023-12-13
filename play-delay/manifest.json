@@ -1,0 +1,21 @@
+{
+  "name": "Play Delay",
+  "version": "1.13",
+  "description": "Delay the playing of a video.",
+  "icons": {
+    "16": "assets/images/hourglass16.png",
+    "32": "assets/images/hourglass32.png",
+    "128": "assets/images/hourglass128.png" 
+  },
+  "browser_action": {
+    "default_popup": "index.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.youtube.com/*"],
+      "js": ["contentScript.js"],
+      "all_frames": true
+    }
+  ],
+  "manifest_version": 2
+}
